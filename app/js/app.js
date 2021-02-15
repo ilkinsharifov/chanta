@@ -3,7 +3,7 @@
 $(document).ready(function () {
     $('#sidebar-btn').click(function () {
         $('.line-black').toggleClass('line-black-move');
-        $('.sidebar-btn,.sidebar').toggleClass('active');
+        $('#sidebar-btn,.sidebar').toggleClass('active');
         $('body').toggleClass('lock');
     });
 });

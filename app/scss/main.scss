@@ -53,7 +53,7 @@ body.lock {
 }
 
 .btn {
-    font-family: 'Kyiv_Type_medium' !important;
+    font-family: 'Kyiv_Type' !important;
     width: 330px;
     height: 50px;
     box-sizing: border-box;
@@ -259,7 +259,7 @@ body.lock {
     height: 90vh;
 
     &--author {
-        font-family: 'Kyiv_Type_medium';
+        font-family: 'Kyiv_Type_bold';
         font-size: 16px;
     }
 
@@ -455,7 +455,7 @@ body.lock {
     left: 0;
     margin-left: -20px;
     padding-bottom: 40px;
-    background: linear-gradient($red 50%, $black 50%);
+    // background: linear-gradient($red 50%, $black 50%);
     background-size: 200% 200%;
     transition: 300ms ease-out;
 
@@ -484,7 +484,7 @@ body.lock {
     }
 
     &--btn {
-        font-family: "Kyiv_Type_medium";
+        font-family: "Kyiv_Type";
         margin-left: calc(var(--kof) * 20);
         margin-bottom: calc(var(--kof) * 20);
     }
@@ -492,8 +492,9 @@ body.lock {
 
 .production__item:nth-child(2n) .production__block {
     top: calc(var(--kof) * 20);
-
 }
+
+
 
 .slider {
     position: relative;
@@ -576,7 +577,7 @@ body.lock {
 
     &__subtitle {
         color: $black;
-        font-family: 'Kyiv_Type_medium';
+        font-family: 'Kyiv_Type';
         font-size: 40px;
         line-height: 110%;
         letter-spacing: -0.05em;
@@ -646,12 +647,12 @@ body.lock {
 .culture-a {
     background-image: url('../images/dist/icons/A-red.svg');
     background-repeat: no-repeat;
-    background-size: 39vh;
+    background-size: 100% 100%;
     position: absolute;
-    top: 0;
-    right: -13%;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    left: 200px;
+    width: 440px;
+    height: 1200px;
     z-index: 59;
     mix-blend-mode: multiply;
     opacity: 1;
@@ -717,7 +718,7 @@ body.lock {
         }
 
         &--author {
-            font-family: 'Kyiv_Type_medium';
+            font-family: 'Kyiv_Type_bold';
             font-size: 16px;
             text-align: right;
         }
@@ -789,7 +790,7 @@ body.lock {
     transition: 300ms ease-out;
 
     &--link {
-        font-family: "Kyiv_Type_medium"
+        font-family: "Kyiv_Type"
     }
 
     &:hover {
@@ -822,7 +823,7 @@ body.lock {
     transition: 300ms ease-out;
 
     &--link {
-        font-family: "Kyiv_Type_medium";
+        font-family: "Kyiv_Type";
     }
 
     &:hover {
@@ -1412,28 +1413,30 @@ body.lock {
 }
 
 .mainSlider {
+    background-color: #000;
     position: absolute;
     box-sizing: border-box;
     z-index: 1;
     width: 100%;
     height: 100vh;
     transition: 1s;
-
+    background-color: #000;
     img {
-        
         height: 100vh;
         object-fit: cover;
+        position: relative;
+        
     }
 
     .slick-list {
         padding-left: 0;
     }
-
 }
 
 .footer-menu__contacts--link {
     font-family: "Kyiv_Type_bold";
 }
+
 @media (max-width: 1200px) {
     .bred{
         &-img{
@@ -1459,6 +1462,13 @@ body.lock {
     }
 }
 @media (max-width: 1000px) {
+    .culture-a {
+        top: 180px;
+        bottom: 0;
+        left: 770px;
+        width: 440px;
+        height: 1200px;
+    }
     .bred{
         &-img{
             &-top{
@@ -1475,6 +1485,13 @@ body.lock {
 }
 
 @media (max-width: 767px) {
+    .culture-a {
+        top: 180px;
+        bottom: 0;
+        left: 570px;
+        width: 440px;
+        height: 1200px;
+    }
     .production {
         &__about {
             &--title {
@@ -1492,6 +1509,13 @@ body.lock {
 }
 
 @media (max-width: 500px) {
+    .culture-a {
+        top: 180px;
+        bottom: 0;
+        left: 400px;
+        width: 440px;
+        height: 1200px;
+    }
     .healthly-bread{
         &__about{
             &--title{
@@ -1588,7 +1612,13 @@ body.lock {
 }
 
 @media (max-width: 450px) {
-
+    .culture-a {
+        top: 180px;
+        bottom: 0;
+        left: 270px;
+        width: 440px;
+        height: 1200px;
+    }
     .reviews {
         &__img {
 
@@ -1605,6 +1635,13 @@ body.lock {
 }
 
 @media (max-width: 350px) {
+    .culture-a {
+        top: 180px;
+        bottom: 0;
+        left: 270px;
+        width: 440px;
+        height: 1200px;
+    }
     .mobile-footer-menu {
         margin-right: 45px;
         margin-left: 0;
@@ -1695,5 +1732,19 @@ body.lock {
         &__title {
             font-size: 38px;
         }
+    }
+}
+.production__item:nth-child(2) .production__block {
+    position: absolute;
+    background-color: $black;
+    width: 98%;
+    left: 0;
+    margin-left: -20px;
+    padding-bottom: 40px;
+    background: linear-gradient($red 50%, $black 50%);
+    background-size: 200% 200%;
+    transition: 300ms ease-out;
+    &:hover {
+        background-position: -100% -100%;
     }
 }
