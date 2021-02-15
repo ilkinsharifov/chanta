@@ -106,6 +106,7 @@ body.lock {
     font-size: calc(var(--kof) * 100);
     line-height: 110%;
     text-transform: uppercase;
+    letter-spacing: -0.05em;
 
     @media (max-width: 767px) {
         font-size: calc(var(--kof) * 60);
