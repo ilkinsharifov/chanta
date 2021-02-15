@@ -1,0 +1,146 @@
+@import 'var';
+
+
+.footer {
+    background-color: $blue-sky;
+    display: flex;
+    justify-content: center;
+    padding-top: calc(var(--kof) * 41);
+    padding-bottom: calc(var(--kof) * 35);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 960px;
+}
+
+.copy {
+    display: flex;
+    flex-direction: column;
+}
+
+.copy__text {
+    color: $black;
+    font-family: 'Raleway_Regular';
+    font-size: calc(var(--kof) * 12);
+    line-height: calc(var(--kof) * 14);
+    opacity: 0.5;
+    margin-bottom: calc(var(--kof) * 10);
+
+}
+
+.dev__link {
+    color: $black;
+    font-family: 'Raleway_Regular';
+    font-size: calc(var(--kof) * 12);
+    line-height: calc(var(--kof) * 14);
+    opacity: 0.5;
+    text-decoration: none;
+
+}
+
+
+.socials {
+    display: flex;
+    margin-right: calc(var(--kof) * 25);
+}
+
+.facebook__link {
+    background-image: url('../images/dist/icons/facebook.svg');
+    background-repeat: no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: calc(var(--kof) * 20);
+    cursor: pointer;
+}
+
+.instagram__link {
+    background-image: url('../images/dist/icons/instagram.svg');
+    background-repeat: no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.call {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.call__text {
+    color: $black;
+    font-family: 'Raleway_Regular';
+    font-size: calc(var(--kof) * 12);
+    line-height: calc(var(--kof) * 14);
+    opacity: 0.5;
+    margin-bottom: calc(var(--kof) * 4);
+    margin-right: calc(var(--kof) * 10);
+
+}
+
+.call__tel {
+    font-family: "Kyiv_Type_bold";
+    color: $black;
+    font-size: 26px;
+    line-height: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: calc(var(--kof) * 10);
+
+}
+
+.copy-mob {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        padding-top: calc(var(--kof) * 50);
+        padding-bottom: calc(var(--kof) * 50);
+    }
+
+    .copy {
+        display: none;
+
+        &__text {
+            font-size: 12px;
+        }
+    }
+
+    .dev {
+        &__link {
+            font-size: 12px;
+        }
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .call {
+        &__text {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        margin-bottom: calc(var(--kof) * 20);
+    }
+
+    .copy-mob {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

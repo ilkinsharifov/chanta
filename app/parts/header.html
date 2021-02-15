@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		<!--#echo var="title" -->
+	</title>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+
+
+<body>
+	<header class="header">
+		<div class="header__inner">
+
+
+			<div id='sidebar-btn' class="sidebar-btn">
+				<div class="line-red"></div>
+				<div class="line-black"></div>
+				<div class="sidebar-menu">
+					<span></span>
+				</div>
+			</div>
+			<div class="lang">
+				<ul class="lang__list">
+					<li class="lang__item">
+						<a class="lang__item--link" href="#">Ua</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="logo">
+			<a class="logo__link" href="#">
+				<img src="./images/dist/icons/logo.svg" alt="">
+			</a>
+		</div>
+
+		<div class="contacts-menu">
+			<div class="tel">
+				<a class="tel__link" href="tel:+380">
+					<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M23.128 1.154L18.253.029a1.132 1.132 0 00-1.289.651l-2.25 5.25c-.197.46-.065.998.324 1.313l2.84 2.324a17.372 17.372 0 01-8.306 8.307l-2.325-2.841a1.124 1.124 0 00-1.312-.323l-5.25 2.25c-.502.22-.778.764-.656 1.293l1.125 4.875c.117.506.567.872 1.096.872C14.255 24 24 14.274 24 2.25c0-.525-.36-.98-.872-1.096z"
+							fill="#FCFCFC" />
+					</svg>
+				</a>
+			</div>
+			<div class="message">
+				<a class="message__link" href="mailto:mail@mail.com">
+					<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M12.004 0a12 12 0 00-10.54 17.744l-1.42 4.98a1 1 0 001.276 1.224l4.676-1.558A12 12 0 1012.004 0zm-4 10a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1zm1 3h4a1 1 0 110 2h-4a1 1 0 010-2z"
+							fill="#FCFCFC" />
+					</svg>
+				</a>
+			</div>
+		</div>
+
+
+		<!-- SIDEBAR -->
+
+		<div class="sidebar">
+			<div class="mobile-logo">
+				<a class="mobile-logo__link" href="#">
+					<img src="./images/dist/icons/logo.svg" alt="">
+				</a>
+			</div>
+			<nav class="nav">
+				<ul class="main__list">
+					<li class="main__item">
+						<a class="main__item--link" href="#">Головна</a>
+
+					</li>
+				</ul>
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="nav__item--link" href="#">Про Чанта</a>
+						<ul class="sub__list">
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Сертифікація</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Виробництво</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Команда</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__item--link" href="#">Блог</a>
+						<ul class="sub__list">
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Спробуй наш хліб прямо зараз</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__item--link" href="#">Контакти</a>
+						<ul class="sub__list">
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Загальні контакти</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Де купити</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Контакти для партнерів</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__item--link" href="#">Хліб</a>
+						<ul class="sub__list">
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Артизан</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Чіабата</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Багети</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Міні-хліба</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Хліба "Спеціалітет"</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Житні хліба</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__item--link" href="#">Заморозка</a>
+						<div class="logo-frozen"></div>
+						<ul class="sub__list">
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Заморозка (круасан) в індивідуальному пакованні</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Fresh (круасан) в індивідуальному пакованні</a>
+							</li>
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Заморозка в індивідуальному пакованні</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__item--link" href="#">Слойка</a>
+						<ul class="sub__list">
+							<li class="sub__item">
+								<a class="sub__item--link" href="#">Листкові вироби</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="mobile-footer-menu">
+					<div class="mobile-footer-menu__contacts">
+						<p class="mobile-footer-menu__contacts--text">Маєте питання, телефонуйте:</p>
+						<a class="mobile-footer-menu__contacts--link" href="tel:+380674127761">+38 067 4127761</a>
+					</div>
+					<div class="mobile-footer-menu__socials">
+						<div class="mobile-footer-menu__facebook">
+							<a class="mobile-footer-menu__facebook--link" href="https://www.facebook.com/ChantaMount"></a>
+						</div>
+						<div class="mobile-footer-menu__instagram">
+							<a class="mobile-footer-menu__instagram--link" href="https://www.instagram.com/chantamount/"></a>
+						</div>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="letter"></div>
+			<div class="footer-menu">
+				<div class="footer-menu__contacts">
+					<p class="footer-menu__contacts--text">Маєте питання, телефонуйте:</p>
+					<a class="footer-menu__contacts--link" href="tel:+380674127761">+38 067 4127761</a>
+				</div>
+				<div class="footer-menu__socials">
+					<div class="footer-menu__facebook">
+						<a class="footer-menu__facebook--link" href="https://www.facebook.com/ChantaMount"></a>
+					</div>
+					<div class="footer-menu__instagram">
+						<a class="footer-menu__instagram--link" href="https://www.instagram.com/chantamount/"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
