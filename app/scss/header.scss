@@ -12,58 +12,137 @@
     align-items: center;
     right: 0;
     top: 0;
-    padding-top: 72px;
-    padding-right: 50px;
+    padding-top: calc(var(--kof) * 72);
+    padding-right: calc(var(--kof) * 50);
     z-index: 100001;
+    &.sidebar-btn {
+        #sidebar-btn {
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #000;
+                width: 100%;
+                height: calc(var(--kof) * 3);
+                transition: all 0.3s ease 0s;
+                @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+                    height: 3px;
+                    background-color: #fff;
+                }
+            }
+            span {
+                position: absolute;
+                background-color: #000;
+                width: 100%;
+                height: calc(var(--kof) * 3);
+                left: 0;
+                top: calc(var(--kof) * 11);
+                transition: all 0.3s ease 0s;
+                @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+                    height: 3px;
+                    top: 7px;
+                    background-color: #fff;
+                }
+            }
+            &:hover {
+                span, &::after, &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .lang__item--link {
+            color: $black;
+        }
+        
+    }
 }
 
 .line-red {
     background-image: url('../images/dist/icons/menu-line-red.svg');
+    background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -125px;
-    right: -50px;
-    width: 140px;
-    height: 200px;
+    top: calc((var(--kof) * 125) * -1);
+    right: calc((var(--kof) * 50) * -1);
+    width: calc(var(--kof) * 140);
+    height: calc(var(--kof) * 200);
     transform: translate(100%);
     transition: 100ms;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        top: -125px;
+        right: -50px;
+        width: 140px;
+        height: 96px;
+        z-index: 1;
+    }
 }
 
 .line-black {
     background-image: url('../images/dist/icons/menu-line-black.svg');
     background-repeat: no-repeat;
-    background-size: 140px 147px;
+    background-size: calc(var(--kof) * 140) calc(var(--kof) * 147);
     position: absolute;
-    top: -125px;
-    right: -50px;
-    width: 140px;
-    height: 200px;
+    top: calc((var(--kof) * 125) * -1);
+    right: calc((var(--kof) * 50) * -1);
+    width: calc(var(--kof) * 140);
+    height: calc(var(--kof) * 200);
     transform: translate(100%);
     transition: 100ms;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        background-size: 86px 93px;
+        top: -125px;
+        right: -50px;
+        width: 140px;
+        height: 200px;
+    }
 }
 
 #sidebar-btn {
-    width: 40px;
-    height: 25px;
+    width: calc(var(--kof) * 40);
+    height: calc(var(--kof) * 25);
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 43px;
+    margin-bottom: calc(var(--kof) * 43);
     cursor: pointer;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        width: 24px;
+        height: 17px;
+        margin-bottom: 0;
+    }
 
     &:hover .line-red {
         transform: translate(0%);
-        top: -75px;
-        right: -50px;
+        top: calc((var(--kof) * 75) * -1);
+        right: calc((var(--kof) * 50) * -1);
         transition: 450ms;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            top: -51px;
+            right: -93px;
+        }
     }
 
     &:hover .line-black {
         transform: translate(0%);
-        top: -75px;
-        right: -50px;
+        top: calc((var(--kof) * 75) * -1);
+        right: calc((var(--kof) * 50) * -1);
         transition:450ms;
         transition-delay: 450ms;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            top: -48px;
+            right: -93px;
+        }
+    }
+
+    .line-black {
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            transform: translate(0%);
+            top: -48px;
+            right: -93px;
+        }
     }
 }
 
@@ -75,41 +154,27 @@
         position: absolute;
         background-color: $white;
         width: 100%;
-        height: 3px;
+        height: calc(var(--kof) * 3);
         transition: all 0.3s ease 0s;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            height: 3px;
+            z-index: 2;
+        }
     }
 }
 
 #sidebar-btn span {
-    content: '';
     position: absolute;
     background-color: $white;
     width: 100%;
-    height: 3px;
+    height: calc(var(--kof) * 3);
     left: 0;
-    top: 11px;
+    top: calc(var(--kof) * 11);
     transition: all 0.3s ease 0s;
-}
-#sidebar-btn.sidebar-btn span {
-    content: '';
-    position: absolute;
-    background-color: #000;
-    width: 100%;
-    height: 3px;
-    left: 0;
-    top: 11px;
-    transition: all 0.3s ease 0s;
-}
-#sidebar-btn.sidebar-btn {
-
-    &::after,
-    &::before {
-        content: '';
-        position: absolute;
-        background-color: #000;
-        width: 100%;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
         height: 3px;
-        transition: all 0.3s ease 0s;
+        top: 7px;
+        z-index: 3;
     }
 }
 
@@ -135,16 +200,34 @@
 
 #sidebar-btn.active::before {
     transform: rotate(45deg);
-    top: 10px;
+    top: calc(var(--kof) * 11);
+    background-color: #000;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        top: 10px;
+        background-color: #fff;
+    }
 }
 
 #sidebar-btn.active::after {
     transform: rotate(-45deg);
-    bottom: 11px;
+    bottom: calc(var(--kof) * 11);
+    background-color: #000;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        bottom: 4px;
+        background-color: #fff;
+    }
 }
 
 #sidebar-btn.active span {
     transform: scale(0);
+}
+
+#sidebar-btn.active {
+    &:hover {
+        &::after, &::before  {
+            background-color: #fff;
+        }
+    }
 }
 
 
@@ -165,16 +248,24 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        font-size: 12px;
+    }
 }
 
 .logo {
     position: fixed;
-    width: 200px;
-    height: 157px;
+    width: calc(var(--kof) * 200);
+    height: calc(var(--kof) * 157);
     clip-path: polygon(100% 0, 100% 48%, 0 100%, 0 52%);
-    margin-top: 100px;
+    margin-top: calc(var(--kof) * 50);
     z-index: 100001;
     cursor: pointer;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        width: 200px;
+        height: 157px;
+        margin-top: 50px;
+    }
 }
 
 .logo-redLine {
@@ -186,13 +277,20 @@
 
 .contacts-menu {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: calc(var(--kof) * 50);
+    right: calc(var(--kof) * 50);
     z-index: 100001;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        right: 50px;
+        bottom: 50px;
+    }
 }
 
 .tel {
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--kof) * 20);
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-bottom: 20px;
+    }
 }
 
 .tel__link {
@@ -200,12 +298,24 @@
     align-items: center;
     justify-content: center;
     background-color: $black;
-    width: 50px;
-    height: 50px;
+    width: calc(var(--kof) * 50);
+    height: calc(var(--kof) * 50);
     border-radius: 50%;
     background: linear-gradient(to left, $black 50%, $red 50%) right;
-    background-size: 200%;
+    background-size: 205%;
     transition: 300ms ease-out;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        width: 50px;
+        height: 50px;
+    }
+
+    img {
+        width: calc(var(--kof) * 24);
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            width: 24px;
+        }
+    }
 
     &:hover {
         background-position: left;
@@ -217,12 +327,25 @@
     align-items: center;
     justify-content: center;
     background-color: $black;
-    width: 50px;
-    height: 50px;
+    width: calc(var(--kof) * 50);
+    height: calc(var(--kof) * 50);
     border-radius: 50%;
     background: linear-gradient(to left, $black 50%, $red 50%) right;
-    background-size: 200%;
+    background-size: 205%;
     transition: 300ms ease-out;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        width: 50px;
+        height: 50px;
+    }
+
+    img {
+        width: calc(var(--kof) * 24);
+
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            width: 24px;
+        }
+    }
 
     &:hover {
         background-position: left;
@@ -239,6 +362,9 @@
     transition: all 0.3s ease 0s;
     overflow: auto;
     overflow-x: hidden;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) { 
+        height: calc(var(--vh,1vh) * 100);
+    }
 }
 
 .sidebar.active {
@@ -249,15 +375,24 @@
     display: flex;
     flex-direction: column;
     margin-left: calc(var(--kof) * 240);
-    margin-bottom: calc(var(--kof) * 135);
+    margin-right: calc(var(--kof) * 140);
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-left: 23px;
+        margin-right: 22px;
+    }
 
 }
 
 .main__list {
     list-style: none;
     display: flex;
-    margin-top: 10%;
+    margin-top: calc(var(--kof) * 177);
     z-index: 1000;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-top: 130px;
+    }
 
 }
 
@@ -274,7 +409,13 @@
 .nav__item {
     margin-right: calc(var(--kof) * 90);
     margin-bottom: calc(var(--kof) * 40);
-    width: 240px;
+    width: calc(33.3333% - (var(--kof) * 90));
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-right: 0;
+        margin-bottom: 23px;
+        width: 100%;
+    }
 
     &--link {
         font-family: Kyiv_Type;
@@ -285,67 +426,115 @@
         display: block;
         background-color: $red;
         content: '';
-        width: 30px;
-        height: 5px;
+        width: calc(var(--kof) * 30);
+        height: calc(var(--kof) * 5);
         clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0 100%);
-        margin-bottom: calc(var(--kof) * 7);
+        margin-bottom: calc(var(--kof) * 6);
+
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            margin-bottom: 6px;
+            width: 30px;
+            height: 5px;
+        }
     }
 }
 
 .main__item {
-    margin-bottom: 40px;
-    margin-right: 900px;
+    margin-bottom: calc(var(--kof) * 40);
+    margin-right: calc(var(--kof) * 900);
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-bottom: 30px;
+        margin-right: 900px;
+    }
 }
 
 .main__item--link {
     font-family: Kyiv_Type;
     color: $black;
-    font-size: 30px;
+    font-size: calc(var(--kof) * 30);
     line-height: 100%;
     letter-spacing: -0.05em;
     text-transform: uppercase;
     text-decoration: none;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        font-size: 30px;
+    }
 }
 
 .nav__item--link {
     color: $black;
-    font-size: 30px;
+    font-size: calc(var(--kof) * 30);
     line-height: 100%;
     letter-spacing: -0.05em;
     text-transform: uppercase;
     text-decoration: none;
     cursor: default;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        font-size: 30px;
+    }
 }
 
 .sub__list {
     margin-top: calc(var(--kof) * 7);
     list-style: none;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-top: 7px;
+    }
 }
 
 .sub__item {
     margin-bottom: calc(var(--kof) * 7);
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-bottom: 7px;
+    }
 }
 
 .sub__item--link {
-    color: $black;
-    font-size: 16px;
+    color: #000;
+    font-size: calc(var(--kof) * 16);
     line-height: 130%;
     text-decoration: none;
+    transition: 0.3s;
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        font-size: 16px;
+    }
+
+    &:hover {
+        color: $red;
+    }
 }
 
 .logo-frozen {
     background-image: url('../images/dist/icons/logo-frozen.svg');
-    width: 100px;
-    height: 32px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: calc(var(--kof) * 100);
+    height: calc(var(--kof) * 32);
     margin-top: calc(var(--kof) * 7);
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-top: 7px;
+        height: 32px;
+        width: 100px;
+    }
 
     &:before {
         content: '';
         display: block;
         background-image: url('../images/dist/img/frozen-cold.png');
-        width: 100px;
-        height: 32px;
+        background-size: 100% 100%;
+        width: calc(var(--kof) * 100);
+        height: calc(var(--kof) * 32);
         z-index: 2;
+
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            width: 100px;
+            height: 32px;
+        }
     }
 }
 
@@ -356,6 +545,23 @@
     right: calc(var(--kof) * 240);
     display: flex;
     z-index: 1000;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        bottom: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: auto;
+        margin-bottom: 100px;
+    }
+    &__facebook--link, &__instagram--link {
+        display: block;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .footer-menu__contacts {
@@ -363,6 +569,9 @@
     flex-direction: column;
     align-items: center;
     margin-right: calc(var(--kof) * 20);
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-right: 0;
+    }
 }
 
 .footer-menu__contacts--text {
@@ -372,6 +581,11 @@
     line-height: calc(var(--kof) * 14);
     opacity: 0.5;
     margin-bottom: calc(var(--kof) * 4);
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-bottom: 4px;
+        line-height: 14px;
+        font-size: 12px;
+    }
 }
 
 .footer-menu__contacts--link {
@@ -381,32 +595,43 @@
     text-align: right;
     text-transform: uppercase;
     text-decoration: none;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        font-size: 26px;
+    }
 }
 
 .footer-menu__socials {
     display: flex;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-bottom: 20px;
+    }
 }
 
 .footer-menu__facebook {
-    background-image: url('../images/dist/icons/facebook.svg');
-    width: 50px;
-    height: 50px;
     margin-right: calc(var(--kof) * 20);
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        margin-right: 20px;
+    }
 }
 
-.footer-menu__instagram {
-    background-image: url('../images/dist/icons/instagram.svg');
-    width: 50px;
-    height: 50px;
+.footer-menu__instagram, .footer-menu__facebook {
+    width: calc(var(--kof) * 50);
+    height: calc(var(--kof) * 50);
+
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 
 
-@media (max-width: 992px) {
+@media (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
     .logo {
         background-repeat: no-repeat;
-        width: 140px;
-        height: 105px;
+        width: 133px;
+        height: 98px;
         clip-path: polygon(100% 0, 100% 48%, 0 100%, 0 20%);
         margin-top: 10px;
         cursor: pointer;
@@ -417,8 +642,8 @@
     }
 
     .header__inner {
-        padding-top: 32px;
-        padding-right: 15px;
+        padding-top: 36px;
+        padding-right: 23px;
     }
 
     .lang__list {
