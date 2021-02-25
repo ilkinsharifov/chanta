@@ -8,19 +8,34 @@
 	</title>
 	<meta name="viewport" content="width=device-width">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 
 
 <body>
+
+	<div class="preloader-wrap">
+		<div class="preloader-overlay">
+			<div class="preloader-overlay__top"><div class="preloader-figure-top"></div></div>
+			<div class="preloader-overlay__line"></div>
+			<div class="preloader-overlay__bottom"><div class="preloader-figure-bottom"></div></div>	
+		</div>
+		<div class="preloader-logo">
+			<img src="./images/dist/icons/logo-loader.svg" alt="">
+		</div>
+  </div>
+
 	<header class="header">
 		<div class="header__inner">
 
 
 			<div id="sidebar-btn">
-				<div class="line-red"></div>
-				<div class="line-black"></div>
+				<div class="line-wrap">
+					<div class="line-red"></div>
+					<div class="line-black"></div>
+				</div>
 				<div class="sidebar-menu">
 					<span></span>
 				</div>

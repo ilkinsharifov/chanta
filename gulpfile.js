@@ -13,6 +13,7 @@ const lessglob = require('gulp-less-glob')
 const styl = require('gulp-stylus')
 const stylglob = require("gulp-empty")
 const cleancss = require('gulp-clean-css')
+const group_media = require("gulp-group-css-media-queries");
 const autoprefixer = require('gulp-autoprefixer')
 const rename = require('gulp-rename')
 const imagemin = require('gulp-imagemin')
@@ -61,6 +62,9 @@ function styles() {
 	return src([`app/scss/styles.scss`, `!app/css/_*.*`])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
+		.pipe(
+			group_media()
+		)
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(rename({ suffix: ".min" }))
