@@ -6,21 +6,37 @@
 	<title>
 		Title
 	</title>
+    <meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 
 
 <body>
+
+	<div class="preloader-wrap">
+		<div class="preloader-overlay">
+			<div class="preloader-overlay__top"><div class="preloader-figure-top"></div></div>
+			<div class="preloader-overlay__line"></div>
+			<div class="preloader-overlay__bottom"><div class="preloader-figure-bottom"></div></div>	
+		</div>
+		<div class="preloader-logo">
+			<img src="./images/dist/icons/logo-loader.svg" alt="">
+		</div>
+  </div>
+
 	<header class="header">
 		<div class="header__inner">
 
 
 			<div id="sidebar-btn">
-				<div class="line-red"></div>
-				<div class="line-black"></div>
+				<div class="line-wrap">
+					<div class="line-red"></div>
+					<div class="line-black"></div>
+				</div>
 				<div class="sidebar-menu">
 					<span></span>
 				</div>
@@ -184,36 +200,81 @@
 		</div>
 	</header>
 <main>
-    <section class="top-main-bg" id="section-1">
+
+    <ul class="wayp-lists">
+        <li class="active">
+            <a href="#screen-1"></a>
+        </li> 
+        <li>
+            <a href="#screen-2"></a>
+            <span>Це смачно</span>
+        </li>
+        <li>
+            <a href="#screen-3"></a>
+            <span>Здорова їжа</span>
+        </li>
+        <li>
+            <a href="#screen-4"></a>
+            <span>Якість міжнародного рівня</span>
+        </li>
+        <li>
+            <a href="#screen-5"></a>
+            <span>Заморожений хліб</span>
+        </li>
+        <li>
+            <a href="#screen-6"></a>
+            <span>Нова хлібна культура</span>
+        </li>
+        <li>
+            <a href="#screen-7"></a>
+            <span>Це щось нове, хороше</span>
+        </li>
+    </ul>
+
+    <section class="top-main-bg tracked" id="screen-1">
         <div class="mainSlider">
-            <img src='./images/dist/img/mainBg/1.jpg'/>
-            <img src='./images/dist/img/mainBg/2.jpg'/>
-            <img src='./images/dist/img/mainBg/3.jpg'/>
-            <img src='./images/dist/img/mainBg/4.jpg'/>
-            <img src='./images/dist/img/mainBg/5.jpg'/>
-            <img src='./images/dist/img/mainBg/6.jpg'/>
-            <img src='./images/dist/img/mainBg/7.jpg'/>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/1.jpg'/>
+            </div>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/2.jpg'/>
+            </div>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/3.jpg'/>
+            </div>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/4.jpg'/>
+            </div>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/5.jpg'/>
+            </div>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/6.jpg'/>
+            </div>
+            <div class="main-slider-item">
+                <img src='./images/dist/img/mainBg/7.jpg'/>
+            </div>    
         </div>
         <div class="top-block">
-            <h2 class="top-block__title title">
+            <h2 class="top-block__title title wow animate__animated animate__fadeIn animate__delay-1s">
                 НОВА ХЛІБНА КУЛЬТУРА
             </h2>
-            <a class="top-block__link btn" href="#">Відкрити каталог хліба</a>
+            <a class="top-block__link btn wow animate__animated animate__fadeIn animate__delay-2s" href="#">Відкрити каталог хліба</a>
         </div>
         <div class="letter"></div>
         <div class="stamp"></div>
-        <div class="arrow"></div>
+        <div class="arrow arrow-top"></div>
 
     </section>
 
-    <section class="reviews" id="section">
+    <section class="reviews tracked" id="screen-2">
         <div class="reviews__block">
             <ul class="reviews__list slider-reviews">
                 <li class="reviews__item">
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget1.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">
                             Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
@@ -232,7 +293,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget2.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">
                             Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
@@ -251,7 +312,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget3.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
                             хрумтить,
@@ -268,7 +329,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget4.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">
                             Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
@@ -287,7 +348,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget5.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
                             хрумтить,
@@ -304,7 +365,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget6.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">
                             Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
@@ -323,7 +384,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget7.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
                             хрумтить,
@@ -340,7 +401,7 @@
                     <div class="reviews__img">
                         <img src="./images/dist/img/bagget8.png" alt="">
                     </div>
-                    <div class="reviews--texts">
+                    <div class="reviews--texts wow animate__animated animate__fadeIn animate__delay-300ms">
                         <p class="reviews__item--text text-reviews">
                             Беру багет, він ще теплий і гріє долоню. Розламую,
                             скоринка
@@ -359,95 +420,149 @@
         </div>
     </section> 
 
-    <section class="healthly-bread" id="section-3">
+    <section class="healthly-bread tracked" id="screen-3">
         <div class="healthly-bread__about">
-            <h2 class="healthly-bread__about--title title">Хліб — <br> це здорова їжа</h2>
-            <p class="healthly-bread__about--text text">Без додавання цукру, маргарину, ароматизаторів та консервантів.
+            <h2 class="healthly-bread__about--title title wow animate__animated animate__fadeIn animate__delay-300ms">Хліб — <br> це здорова їжа</h2>
+            <p class="healthly-bread__about--text text wow animate__animated animate__fadeIn animate__delay-300ms">Без додавання цукру, маргарину, ароматизаторів та консервантів.
                 Мінімум солі.</p>
-            <p class="healthly-bread__about--text text">Зроблений на заквасці, легкий, хрусткий хліб з додатками
+            <p class="healthly-bread__about--text text wow animate__animated animate__fadeIn animate__delay-300ms">Зроблений на заквасці, легкий, хрусткий хліб з додатками
                 кунжуту,
                 насіння соняшника чи льну.</p>
-            <p class="healthly-bread__about--text text">Це простий і добрий склад, тому він легко засвоюється. Моряк
+            <p class="healthly-bread__about--text text wow animate__animated animate__fadeIn animate__delay-300ms">Це простий і добрий склад, тому він легко засвоюється. Моряк
                 Папай
                 просто не знав про наш хліб, а так би їв його разом зі шпинатом."</p>
-            <div class="healthly-bread__btn">
+            <div class="healthly-bread__btn wow animate__animated animate__fadeIn animate__delay-300ms">
                 <a class="healthly-bread__btn--link btn" href="#">Дивіться наш хліб в каталозі</a>
             </div>
         </div>
-        <div class="bred-img-top">
+        <div class="bred-img-top parallax__layer" data-speed="65">
             <img src="./images/dist/img/bread-scroll2.png" alt="">
+            <div class="tooltip-item tooltip-item-pos-1">
+                <div class="tooltip-item__line tooltip-item__line-red"><span class="tooltip-item__letter">В</span></div>
+                <div class="tooltip-item__text">
+                    <p>
+                        Це простий і добрий склад, тому він легко засвоюється. Моряк Папай просто не знав про наш хліб, а так би їв його разом зі шпинатом."
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="bred-img-bottom">
+        <div class="bred-img-bottom parallax__layer" data-speed="65">
             <img src="./images/dist/img/bread-scroll1.png" alt="">
+            <div class="tooltip-item tooltip-item-pos-2">
+                <div class="tooltip-item__line tooltip-item__line-black"><span class="tooltip-item__letter">К</span></div>
+                <div class="tooltip-item__text">
+                    <p>
+                        Це простий і добрий склад, тому він легко засвоюється. Моряк Папай просто не знав про наш хліб, а так би їв його разом зі шпинатом."
+                    </p>
+                </div>
+            </div>
+            <div class="tooltip-item tooltip-item-pos-3">
+                <div class="tooltip-item__line tooltip-item__line-red"><span class="tooltip-item__letter">А</span></div>
+                <div class="tooltip-item__text">
+                    <p>
+                        Це простий і добрий склад, тому він легко засвоюється. Моряк Папай просто не знав про наш хліб, а так би їв його разом зі шпинатом."
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="production" id="section-4">
-        <div class="production__about">
+    <section class="production tracked" id="screen-4">
+        <div class="production__about wow animate__animated animate__fadeIn animate__delay-300ms">
             <h2 class="production__about--title title">
                 <span>Хліб Чанта —</span> 
                 <br> 
                 <span>якість міжнародного рівня</span></h2>
         </div>
-        <ul class="production__list slider slider-product">
-            <li class="production__item slider__item">
-                <div class="production__item--img">
-                    <img src="./images/dist/img/slider-production1.jpg" alt="">
-                </div>
-                <div class="production__block">
-                    <p class="production__block--subtitle">
-                        В проєкт Chanta Mount вкладено більне ніж 25 мільонів євро.
-                    </p>
-                    <a class="production__block--btn btn-white" href="#">дізнайтесь більше</a>
-                </div>
-            </li>
-            <li class="production__item slider__item">
-                <div class="production__item--img">
-                    <img src="./images/dist/img/slider-production2.jpg" alt="">
-                    <div class="production__item--number">90</div>
-                </div>
-                <div class="production__block pd-offset">
-                    <p class="production__block--subtitle">
-                        Ми здатні виробляти до 90 тон хлібу на добу.
-                    </p>
-                </div>
-            </li>
-            <li class="production__item slider__item">
-                <div class="production__item--img">
-                    <img src="./images/dist/img/slider-production3.jpg" alt="">
-                    <div class="production__item--logo">
-                        <img src="./images/dist/icons/pd-logo-1.svg" alt="">
+        <!-- Slider main container -->
+        <div class="swiper-container production__list slider slider-product">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide production__item slider__item">
+                    <div class="production__block wow animate__animated animate__fadeIn animate__delay-300ms">
+                        <p class="production__block--subtitle">
+                            В проєкт Chanta Mount вкладено більне ніж 25 мільонів євро.
+                        </p>
+                        <div class="production__block-btn-wrap">
+                            <a class="production__block--btn" href="#"><span>дізнайтесь більше</span></a>
+                        </div> 
+                    </div>
+                    <div class="production__item--img">
+                        <img src="./images/dist/img/slider-production1.jpg" alt="">
                     </div>
                 </div>
-                <div class="production__block">
-                    <p class="production__block--subtitle">
-                        Ми працюємо по найскладнішому сертифікату FSSC 22000.
-                    </p>
-                    <p class="production__block--text">
-                        Він робить абсолютно весь процес прозорим. Кожен завод мріє про нього, але вимоги дуже високі.
-                    </p>
+                <div class="swiper-slide production__item slider__item">
+                    <div class="production__block pd-offset wow animate__animated animate__fadeIn animate__delay-300ms">
+                        <p class="production__block--subtitle">
+                            Ми здатні виробляти до 90 тон хлібу на добу.
+                        </p>
+                        <div class="production__block-btn-wrap">
+                            <a class="production__block--btn" href="#"><span>дізнайтесь більше</span></a>
+                        </div> 
+                    </div>
+                    <div class="production__item--img">
+                        <img src="./images/dist/img/slider-production2.jpg" alt="">
+                        <div class="production__item--number">90</div>
+                    </div>
                 </div>
-            </li>
-        </ul>
+                <div class="swiper-slide production__item slider__item">
+                    <div class="production__block wow animate__animated animate__fadeIn animate__delay-1s">
+                        <p class="production__block--subtitle">
+                            Ми працюємо по найскладнішому сертифікату FSSC 22000.
+                        </p>
+                        <p class="production__block--text">
+                            Він робить абсолютно весь процес прозорим. Кожен завод мріє про нього, але вимоги дуже високі.
+                        </p>
+                        <div class="production__block-btn-wrap">
+                            <a class="production__block--btn" href="#"><span>дізнайтесь більше</span></a>
+                        </div> 
+                    </div>
+                    <div class="production__item--img">
+                        <img src="./images/dist/img/slider-production3.jpg" alt="">
+                        <div class="production__item--logo">
+                            <img src="./images/dist/icons/pd-logo-1.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide production__item slider__item">
+                    <div class="production__block pd-offset wow animate__animated animate__fadeIn animate__delay-1s">
+                        <p class="production__block--subtitle">
+                            В нас найпотужнишій рівень автоматизаціі в Східній Европі.
+                        </p>
+                        <div class="production__block-btn-wrap">
+                            <a class="production__block--btn" href="#"><span>дізнайтесь більше</span></a>
+                        </div> 
+                    </div>
+                    <div class="production__item--img">
+                        <img src="./images/dist/img/slider-production4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="product-prev swiper-arrow"></div>
+            <div class="product-next swiper-arrow"></div>
+        </div>
     </section>
 
-    <section class="frozen-bg" id="section-5">
+    <section class="frozen-bg tracked" id="screen-5">
         <div class="frozen">
-            <div class="fozen__logo"></div>
-            <h2 class="frozen__title title">Заморожений <br> хліб —</h2>
-            <p class="frozen__subtitle">технологічне та безпечне майбутне</p>
-            <div class="text-dekor"></div>
-            <p class="frozen__text text">Ми піддаємо свіжоспечений хліб шоковому заморожуванню (- 35 градусів). Саме
+            <div class="fozen__logo wow animate__animated animate__fadeIn animate__delay-300ms"></div>
+            <h2 class="frozen__title title wow animate__animated animate__fadeIn animate__delay-300ms">Заморожений <br> хліб —</h2>
+            <p class="frozen__subtitle wow animate__animated animate__fadeIn animate__delay-300ms">технологічне та безпечне майбутне</p>
+            <div class="text-dekor wow animate__animated animate__fadeIn animate__delay-300ms"></div>
+            <p class="frozen__text text wow animate__animated animate__fadeIn animate__delay-300ms">Ми піддаємо свіжоспечений хліб шоковому заморожуванню (- 35 градусів). Саме
                 тому
                 нам
                 не потрібні консерванти, а хліб може лежати хоч рік. І залишатися таким же свіжим, хрустким і
                 гарячим
                 після приготування вдома.</p>
-            <p class="frozen__text text">Ви просто купуєте його, кладете в морозилку і дістаєте, коли потрібно.
+            <p class="frozen__text text wow animate__animated animate__fadeIn animate__delay-300ms">Ви просто купуєте його, кладете в морозилку і дістаєте, коли потрібно.
                 Навіть
                 після
                 Апокаліпсису - просто підігрій.</p>
-            <div class="frozen__btn">
+            <div class="frozen__btn wow animate__animated animate__fadeIn animate__delay-300ms">
                 <a class="frozen__btn--link btn" href="#">Показати продукти “FROZEN”</a>
             </div>
         </div>
@@ -457,19 +572,19 @@
     </section>
 
 
-    <section class="culture-section" id="section-6">
+    <section class="culture-section tracked" id="screen-6">
         <div class="culture-a">
         </div>
         <div class="culture">
-            <h2 class="culture__title title">Чанта — <br> це нова хлібна культура</h2>
-            <div class="text-dekor"></div>
-            <p class="culture__text text">Хліб такий, яким він повинен бути. Без консервантів, без маргарину, без цурку.
+            <h2 class="culture__title title wow animate__animated animate__fadeIn animate__delay-300ms">Чанта — <br> це нова хлібна культура</h2>
+            <div class="text-dekor wow animate__animated animate__fadeIn animate__delay-300ms"></div>
+            <p class="culture__text text wow animate__animated animate__fadeIn animate__delay-300ms">Хліб такий, яким він повинен бути. Без консервантів, без маргарину, без цурку.
                 Здоровий.</p>
-            <p class="culture__text text">Трохи солі, закваска, гарне, цілісне зерно, подові печі як в 19 столітті. І
+            <p class="culture__text text wow animate__animated animate__fadeIn animate__delay-300ms">Трохи солі, закваска, гарне, цілісне зерно, подові печі як в 19 столітті. І
                 все
                 це
                 — на найпотужніших технологіях.</p>
-            <p class="culture__text text">Це хліб 21 століття. Хліб майбутнього і сьогодення.</p>
+            <p class="culture__text text wow animate__animated animate__fadeIn animate__delay-300ms">Це хліб 21 століття. Хліб майбутнього і сьогодення.</p>
         </div>
 
     </section>
@@ -494,12 +609,12 @@
         </ul>
     </section>
 
-    <section class="team" id="section-7">
+    <section class="team tracked" id="screen-7">
         <div class="team__block">
-            <h2 class="team__block--title title">Це щось нове, <br> хороше</h2>
+            <h2 class="team__block--title title wow animate__animated animate__fadeIn animate__delay-300ms">Це щось нове, <br> хороше</h2>
             <!-- <div class="arrow-duble"></div> -->
             <ul class="team__list slider-reviews">
-                <li class="team__item slider__item">
+                <li class="team__item slider__item wow animate__animated animate__fadeIn animate__delay-300ms">
                     <p class="team__item--text text-reviews">Я раніше вважала, що хліб шкідливий. А виявилося — все
                         залежить
                         від складу.
@@ -518,9 +633,9 @@
 
     <section class="contacts-section">
         <div class="contacts">
-            <h2 class="contacts__title title">Спробуй наш <br>
+            <h2 class="contacts__title title wow animate__animated animate__fadeIn animate__delay-300ms">Спробуй наш <br>
                 хліб <span class="contacts__span">прямо зараз</span></h2>
-            <div class="contacts--bnts">
+            <div class="contacts--bnts wow animate__animated animate__fadeIn animate__delay-300ms">
                 <a class="btn buy__btn--link" href="#">Де купити наш хліб</a>
                 <a class="btn partners__btn--link" href="#">Контакти для партнерів</a>
             </div>
@@ -555,7 +670,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="js/app.min.js" defer></script>
 <script src="js/slick.min.js"></script>
-
-</body>
+<script src="js/wow.min.js"></script>
+<script src="js/waypoint.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+ 
+</body> 
 
 </html>
