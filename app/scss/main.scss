@@ -1,17 +1,6 @@
 @import 'var';
 @import '_fonts';
 
-// ::-webkit-scrollbar {
-//     width: 0px;
-//     background: transparent;
-// }
-
-// html {
-//     box-sizing: border-box;
-//     -ms-overflow-style: none;
-//     scrollbar-width: none;
-// }
-
 *,
 *::before,
 *::after {
@@ -19,13 +8,18 @@
 }
 
 * {
-    font-family: Raleway_Regular;
+    font-family: "Raleway_Regular", sans-serif;
     margin: 0;
     padding: 0;
 }
 
 *:focus {
     outline: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    font-family: "Kyiv_Type_Medium", sans-serif;
 }
 
 img {
@@ -46,12 +40,39 @@ body.lock {
     --kof: (100vh / 900);
 }
 
-.wow {
-    --animate-duration: 1.5s;
+p {
+    font-size: calc(var(--kof) * 16);
+    line-height: 150%;
+    color: #5C6970;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+        font-size: 16px;
+    }
+}
+
+a {
+    transition: 0.3s;
+}
+
+.wow { 
+    --animate-duration: 0.8s;
+}
+
+.animate__delay-300ms {
+    animation-delay: 0.3s;
+}
+
+.animate__delay-500ms {
+    animation-delay: 0.5s;
+}
+.animate__delay-700ms {
+    animation-delay: 0.7s;
+}
+.animate__delay-900ms {
+    animation-delay: 0.9s;
 }
 
 .btn {
-    font-family: 'Kyiv_Type' !important;
+    font-family: 'Kyiv_Type_Medium' !important;
     width: calc(var(--kof) * 330);
     height: calc(var(--kof) * 50);
     box-sizing: border-box;
@@ -69,7 +90,7 @@ body.lock {
     background-size: 205%;
     transition: 300ms ease-out;
     box-shadow: 0px calc(var(--kof) * 15) calc(var(--kof) * 15) rgba(175, 39, 47, 0.15);
-
+    border: 0;
     &:hover {
         background-position: left;
     }
@@ -113,7 +134,7 @@ body.lock {
 }
 
 .title {
-    font-family: "Kyiv_Type";
+    font-family: "Kyiv_Type_Medium";
     color: $black;
     font-size: calc(var(--kof) * 100);
     line-height: 110%;
@@ -123,11 +144,41 @@ body.lock {
     }
 }
 
+.main-title-sm {
+    font-size: calc(var(--kof) * 70);
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+       font-size: 43px;
+    }
+}
+
+.top-block__title {
+    &.main-title-sm {
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+           font-size: 43px;
+        }
+    }
+}
+
+.main-title-descr {
+    font-weight: 500;
+    font-size: calc(var(--kof) * 30);
+    line-height: 90%;
+    letter-spacing: -0.05em;
+    color: #FCFCFC;
+    font-family: "Kyiv_Type_Medium";
+    margin-bottom: calc(var(--kof) * 30);
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+       margin-bottom: 30px;
+       font-size: 30px;
+    }
+}
+
 .text {
     font-family: "Raleway_Regular";
     font-size: calc(var(--kof) * 16);
-    line-height: calc(var(--kof) * 19);
-    opacity: 0.8;
+    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+       font-size: 16px;
+    }
 }
 
 .text-reviews {
@@ -193,13 +244,11 @@ body.lock {
         line-height: 90%;
         letter-spacing: -0.05em;
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-            font-size: 60px;
+            font-size: 50px;
             max-width: 330px;
             width: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
-
-            
 
         @media only screen and (max-width: 374px) {
             font-size: 53px!important;
@@ -212,9 +261,14 @@ body.lock {
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             width: 264px;
         }
+        @media only screen and (max-width: 575px) {
+           width: 100%!important;
+        }
     }
 
 }
+
+
 
 
 .letter {
@@ -227,6 +281,9 @@ body.lock {
     width: 100%;
     height: 100%;
     z-index: 49;
+    @media only screen and (max-width: 767px) {
+       display: none;
+    }
 }
 
 .stamp {
@@ -238,6 +295,11 @@ body.lock {
     width: 100%;
     height: 100%;
     z-index: 49;
+    @media only screen and (max-width: 767px) {
+        background-image: url('../images/dist/icons/stamp-mob.svg');
+        background-position-x: 104%;
+        background-position-y: 90%;
+    }
 }
 
 .arrow {
@@ -258,6 +320,9 @@ body.lock {
         margin: 0 auto;
         right: 0;
         left: 0;
+    }
+    &.arrow-black {
+        background-image: url('../images/dist/icons/arrow-paga-down-black.svg');
     }
 }
 
@@ -321,8 +386,11 @@ body.lock {
     }
 
     &--author {
-        font-family: 'Kyiv_Type_bold';
+        font-weight: 600;
+        font-family: "Raleway_SemiBold";
         font-size: calc(var(--kof) * 16);
+        text-align: right;
+        color: $black;
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             font-size: 16px;
         }
@@ -399,11 +467,6 @@ body.lock {
     }
 }
 
-.reviews__item--author {
-    text-align: right;
-    color: $black;
-}
-
 .reviews__icon {
     position: absolute;
     bottom: calc(var(--kof) * 405);
@@ -454,11 +517,6 @@ body.lock {
         width: calc(var(--kof) * 30);
         height: calc(var(--kof) * 30);
         min-width: calc(var(--kof) * 30);
-        color: $white; 
-        font-size: calc(var(--kof) * 20);
-        line-height: 90%;
-        font-weight: 700;
-        font-family: "Raleway_Bold";
         z-index: 2;
         position: relative;
         &::before {
@@ -483,6 +541,11 @@ body.lock {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        font-weight: 700;
+        font-family: "Raleway_Bold";
+        line-height: 90%;
+        font-size: calc(var(--kof) * 20);
+        color: $white; 
     }
 
     &__line-red {
@@ -510,11 +573,17 @@ body.lock {
         background: $black;
         border-radius: calc(var(--kof) * 3);
         padding: calc(var(--kof) * 16) calc(var(--kof) * 18);
-        width: calc((var(--kof) * 209) - (var(--kof) * 36));
+        width: calc(var(--kof) * 209);
         color: $white;
         font-size: calc(var(--kof) * 14);
-        line-height: calc(var(--kof) * 17);
+        line-height: calc(var(--kof) * 16);
         display: none;
+        box-sizing: border-box;
+        p {
+            color: $white; 
+            font-size: calc(var(--kof) * 14);
+            line-height: calc(var(--kof) * 16);
+        }
     }
 }
 
@@ -550,7 +619,7 @@ body.lock {
     }
 
     &--title {
-        font-family: "Kyiv_Type";
+        font-family: "Kyiv_Type_Medium";
         position: relative;
         letter-spacing: -0.05em;
         font-size: calc(var(--kof) * 70);
@@ -583,15 +652,11 @@ body.lock {
     }
 
     &--text {
-        font-size: calc(var(--kof) * 16);
-        line-height: calc(var(--kof) * 19);
         padding-left: calc(var(--kof) * 100);
         margin-bottom: calc(var(--kof) * 30);
         position: relative;
         z-index: 1;
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-            font-size: 16px;
-            line-height: 19px;
             padding-left: 0;
             margin-bottom: 30px;
         }
@@ -629,22 +694,11 @@ body.lock {
 
 }
 
-.slider-product {
-    .swiper-wrapper {
-        padding-left: calc(var(--kof) * 20);
-        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-            padding-left: 20px;
-        }
-    }
-}
-
 .production {
     padding-top: calc(var(--kof) * 100);
-    padding-bottom: calc(var(--kof) * 128);
-    min-height: calc(100vh - (var(--kof) * 228));
+    min-height: calc(100vh - (var(--kof) * 229));
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
         padding-top: 70px;
-        padding-bottom: 40px;
         min-height: auto;
     }
 }
@@ -661,7 +715,7 @@ body.lock {
     &--title {
         font-size: calc(var(--kof) * 36);
         line-height: 110%;
-        font-family: 'Kyiv_Type';
+        font-family: "Kyiv_Type_Medium";
         letter-spacing: -0.05em;
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             font-size: 36px;
@@ -669,7 +723,7 @@ body.lock {
 
 
         span:first-child {
-            font-family: 'Kyiv_Type';
+            font-family: "Kyiv_Type_Medium";
             display: inline-block;
             font-size: calc(var(--kof) * 40);
             line-height: 110%;
@@ -680,7 +734,7 @@ body.lock {
         }
 
         span:last-child {
-            font-family: 'Kyiv_Type';
+            font-family: "Kyiv_Type_Medium";
             font-size: calc(var(--kof) * 60);
             line-height: 110%;
             letter-spacing: -0.05em;
@@ -696,23 +750,19 @@ body.lock {
 
 .production__list {
     list-style: none;
-    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-        margin-left: 23px;
-    }
 }
 
 .production__item {
     position: relative;
     height: calc(var(--kof) * 500);
-    width: calc(var(--kof) * 410);
-    margin-right: calc(var(--kof) * 50);
+    width: calc(var(--kof) * 550);
+    overflow: hidden;
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
         height: 500px;
-        margin-right: 30px;
-        width: 410px;
+        width: 550px;
     }
     @media only screen and (max-width: 767px) {
-        width: 270px!important;
+        width: 300px!important;
     }
 
     &:hover {
@@ -723,6 +773,10 @@ body.lock {
             &::before {
                 width: 100%;
             }
+        }
+
+        .production__block--link-line {
+            flex: 1;
         }
         
         .production__block-btn-wrap {
@@ -743,7 +797,7 @@ body.lock {
 }
 
 .production__item--img {
-    width: calc(var(--kof) * 410);
+    width: calc(var(--kof) * 550);
     height: calc(var(--kof) * 500);
     transition: 0.3s;
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
@@ -753,19 +807,19 @@ body.lock {
 }
 
 .production__item--number {
-    font-family: 'Kyiv_Type';
+    font-family: "Kyiv_Type_Medium";
     font-weight: 500;
     font-size: calc(var(--kof) * 300);
     line-height: 100%;
     letter-spacing: -0.05em;
     color: $white;
     position: absolute;
-    bottom: calc((var(--kof) * 65) * -1);
-    right: calc((var(--kof) * 65) * -1);
+    top: calc((var(--kof) * 75) * -1);
+    right: calc(var(--kof) * 20);
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-        bottom: -38px;
-        right: -38px;
-        font-size: 200px;
+        right: -35px;
+        top: -70px;
+        font-size: 250px;
     }
 }
 
@@ -778,22 +832,22 @@ body.lock {
 
 .production__item--logo {
     background: $white;
-    padding: calc(var(--kof) * 12) calc(var(--kof) * 20);
-    border-radius: calc(var(--kof) * 5);
+    padding: calc(var(--kof) * 10);
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items:center;
+    justify-content: center;
     position: absolute;
     right: calc(var(--kof) * 20);
     bottom: calc(var(--kof) * 20);
-    width: calc((var(--kof) * 180) - 40px);
-    height: calc((var(--kof) * 180) - 24px);
+    width: calc(var(--kof) * 100);
+    height: calc(var(--kof) * 100);
+    box-sizing: border-box;
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
         right: 20px;
-        bottom: 20px;
-        width: calc(150px - 40px);
-        height: calc(150px - 24px);
-        padding: 12px 20px;
+        bottom: 50px;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
     }
     img {
         max-width: 100%;
@@ -805,18 +859,18 @@ body.lock {
 .production__block {
     position: absolute;
     background-color: $black;
-    width: calc(100% - (var(--kof) * 40));
-    top: calc(var(--kof) * 18);
-    padding: calc(var(--kof) * 20);
+    max-width: calc(var(--kof) * 350);
+    width: 100%;
+    box-sizing: border-box;
+    top: calc(var(--kof) * 50);
+    padding: calc(var(--kof) * 20) calc(var(--kof) * 30) calc(var(--kof) * 30) calc(var(--kof) * 50);
     left: 0;
-    margin-left: calc((var(--kof) * 20) * -1);
     overflow: hidden;
     z-index: 1;
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-        top: 18px;
+        top: 50px;
         padding: 20px;
-        margin-left: -20px;
-        width: calc(100% - 40px);
+        max-width: 276px;
     }
 
     &::before {
@@ -837,9 +891,9 @@ body.lock {
     }
 
     &--subtitle {
-        font-family: "Kyiv_Type";
+        font-family: "Kyiv_Type_Medium";
         color: $white;
-        font-size: calc(var(--kof) * 26);
+        font-size: calc(var(--kof) * 20);
         line-height: 130%;
         position: relative;
         z-index: 2;
@@ -882,6 +936,47 @@ body.lock {
         }
     }
 
+    &--link-wrap {
+        display: flex;
+        align-items: flex-start;
+        margin-top: calc(var(--kof) * 30);
+        position: relative;
+        z-index: 1;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            margin-top: calc(var(--kof) * 30);
+        }
+    }
+
+    &--link {
+        font-weight: 500;
+        font-size: calc(var(--kof) * 12);
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #FCFCFC;
+        font-family: "Kyiv_Type_Medium";
+        display: inline-block;
+        text-decoration: none;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            font-size: 12px;
+        }
+    }
+
+    &--link-line {
+        height: calc(var(--kof) * 1);
+        background-color: #FCFCFC;
+        flex: 0 0 calc(var(--kof) * 40);
+        margin-left: calc(var(--kof) * 10);
+        margin-top: calc(var(--kof) * 6);
+        transition: 0.3s;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            flex: 0 0 40px;
+            margin-left: 10px;
+            margin-top: 6px;
+            height: 1px;
+            flex: 1;
+        }
+    }
+
     &--btn {
         margin-top: 0;
         position: relative;
@@ -901,7 +996,7 @@ body.lock {
         span {
             position: relative;
             z-index: 2;
-            font-family: "Kyiv_Type_bold";
+            font-family: "Kyiv_Type_Medium";
         }
         &::before {
             content: '';
@@ -930,9 +1025,10 @@ body.lock {
     }
 
     &.pd-offset {
-        top: calc(var(--kof) * 248);
+        top: auto;
+        bottom: calc(var(--kof) * 50);
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-            top: 248px;
+            bottom: 50px;
         }
     }
 }
@@ -962,7 +1058,7 @@ body.lock {
     width: calc(var(--kof) * 70);
     height: calc(var(--kof) * 70);
     border: none;
-    margin: 0 calc(var(--kof) * 10) 0 calc(var(--kof) * 10);
+    margin: 0;
     background: rgba(11, 13, 14, 0.8);
     transition: 0.3s;
     overflow: hidden;
@@ -999,13 +1095,16 @@ body.lock {
     }
 }
 
-.slider .slick-arrow.slick-prev, .slider .swiper-arrow.product-prev {
-    right: calc(var(--kof) * 60);
+.slider .slick-arrow.slick-prev, 
+.slider .swiper-arrow.product-prev, 
+.slider .swiper-arrow.team-prev,
+.slider .swiper-arrow.gallery-prev {
+    right: calc(var(--kof) * 70);
     cursor: pointer;
     z-index: 1;
 
     &::before {
-        transform: translateX(100%);
+        transform: translateX(101%);
     }
 
     &:active {
@@ -1027,13 +1126,16 @@ body.lock {
     }
 }
 
-.slider .slick-arrow.slick-next, .slider .swiper-arrow.product-next {
-    right: calc((var(--kof) * 10) * -1);
+.slider .slick-arrow.slick-next, 
+.slider .swiper-arrow.product-next,
+.slider .swiper-arrow.team-next,
+.slider .swiper-arrow.gallery-next {
+    right: 0;
     cursor: pointer;
     z-index: 1;
 
     &::before {
-        transform: translateX(-100%);
+        transform: translateX(-101%);
     }
 
     &::after {
@@ -1081,9 +1183,12 @@ body.lock {
         margin-bottom: calc(var(--kof) * 20);
         font-size: calc(var(--kof) * 70);
         letter-spacing: -0.05em;
+        max-width: calc(var(--kof) * 660);
+        width: 100%;
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             margin-bottom: 20px;
             font-size: 38px;
+            max-width: 660px;
         }
         @media only screen and (max-width: 374px) {
             font-size: 31px!important;
@@ -1092,7 +1197,7 @@ body.lock {
 
     &__subtitle {
         color: $black;
-        font-family: 'Kyiv_Type';
+        font-family: "Kyiv_Type_Medium";
         font-size: calc(var(--kof) * 40);
         line-height: 110%;
         letter-spacing: -0.05em;
@@ -1112,15 +1217,10 @@ body.lock {
         margin-bottom: calc(var(--kof) * 30);
         padding-left: calc(var(--kof) * 100);
         max-width: calc(var(--kof) * 460);
-        font-size: calc(var(--kof) * 16);
-        line-height: calc(var(--kof) * 19);
-        color: $black;
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             padding-left: 0;
             margin-bottom: 30px;
             max-width: 100%;
-            font-size: 16px;
-            line-height: 19px;
         }
         @media only screen and (max-width: 480px) {
             max-width: 280px;
@@ -1254,7 +1354,25 @@ body.lock {
     }
 
     &__item {
-        height: 600px;
+        height: calc(var(--kof) * 500);
+        width: calc(var(--kof) * 600);
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+           width: 600px;
+           height: 500px;
+        }
+        @media only screen and (max-width: 767px) {
+           width: 300px!important;
+           height: 300px!important;
+        }
+        &:nth-child(even) {
+            width: calc(var(--kof) * 400);
+            @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+               width: 400px;
+            }
+            @media only screen and (max-width: 767px) {
+               width: 200px!important;
+            }
+        }
         img {
             height: 100%;
             object-fit: cover;
@@ -1280,17 +1398,11 @@ body.lock {
     }
 
     &__text {
-        font-size: calc(var(--kof) * 16);
-        line-height: calc(var(--kof) * 19);
-        color: $black;
-        opacity: 0.8;
         padding-left: calc(var(--kof) * 100);
         margin-bottom: calc(var(--kof) * 30);
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             padding-left: 0;
             margin-bottom: 30px;
-            line-height: 19px;
-            font-size: 16px;
             max-width: 70%;
         }
         @media only screen and (max-width: 767px) {
@@ -1303,6 +1415,36 @@ body.lock {
     list-style: none;
     .slick-list {
         padding-left: 0;
+    }
+}
+
+.slider-gallery-inner {
+    .culture__item {
+        width: auto;
+        flex-shrink: 1;
+        &:nth-child(even) {
+            @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+               width: 400px;
+            }
+            @media only screen and (max-width: 767px) {
+               width: 300px!important;
+            }
+        }
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+           flex-shrink: 0;
+           width: 600px;
+           height: 500px;
+        }
+        @media only screen and (max-width: 767px) {
+           width: 300px!important;
+           height: 500px!important;
+        }
+    }
+    .swiper-arrow {
+        display: none;
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+           display: block;
+        }
     }
 }
 
@@ -1392,7 +1534,8 @@ body.lock {
         }
 
         &--author {
-            font-family: 'Kyiv_Type_bold';
+            font-family: "Raleway_SemiBold";
+            font-weight: 600;
             font-size: calc(var(--kof) * 16);
             text-align: right;
             @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
@@ -1467,10 +1610,13 @@ body.lock {
         line-height: 110%;
         margin-bottom: calc(var(--kof) * 70);
         letter-spacing: -0.05em;
+        max-width: calc(var(--kof) * 720);
+        width: 100%;
 
         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             font-size: 38px;
             margin-bottom: 70px;
+            max-width: 720px;
         }
 
         br {
@@ -1481,7 +1627,7 @@ body.lock {
 
         span {
             color: $red;
-            font-family: 'Kyiv_Type';
+            font-family: "Kyiv_Type_Medium";
         }
     }
 }
@@ -1607,7 +1753,7 @@ body.lock {
 
 
 .footer-menu__contacts--link {
-    font-family: "Kyiv_Type_bold";
+    font-family: "Kyiv_Type_Medium";
     transition: 0.3s;
     &:hover {
         color: $red;
@@ -1629,7 +1775,7 @@ body.lock {
 
             &__contacts {
                 &--link {
-                    font-family: "Kyiv_Type_bold";
+                    font-family: "Kyiv_Type_Medium";
                 }
             }
         }
@@ -1658,9 +1804,9 @@ body.lock {
     }
 
     .top-block {
-        margin-top: 165px;
+        margin-top: 23px;
         margin-left: 23px;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .letter {
@@ -1675,11 +1821,6 @@ body.lock {
         z-index: 49;
     }
 
-    .stamp {
-        background-image: url('../images/dist/icons/stamp-mob.svg');
-        background-position-x: 86%;
-        background-position-y: 90%;
-    }
 
     .reviews__block {
         margin: 0 auto;
@@ -1733,11 +1874,6 @@ body.lock {
         max-width: 70%;
         margin-bottom: 50px;
         line-height: 110%;
-    }
-
-    .culture__item {
-        width: auto;
-        height: 300px;
     }
 
     .buy__btn {
@@ -1809,7 +1945,7 @@ body.lock {
 
     .call {
         &__tel {
-            font-family: "Kyiv_Type_bold";
+            font-family: "Kyiv_Type_Medium";
         }
     }
 

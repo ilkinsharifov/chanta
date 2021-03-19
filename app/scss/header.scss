@@ -2,7 +2,8 @@
 
 
 html {
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     &.page-ready {
         animation: overflow 0.4s linear forwards;
         animation-delay: 0.4s;
@@ -11,10 +12,10 @@ html {
 
 @keyframes overflow {
     0% {
-        overflow: hidden;
+        overflow-y: hidden;
     }
     100% {
-        overflow: visible;
+        overflow-y: visible;
     }
 }
 
@@ -50,8 +51,8 @@ html {
     transform: rotate(-22deg);
     position: fixed;
     width: calc(100% + (var(--kof) * 400));
-    height: calc(100% + (var(--kof) * 600));
-    top: calc((var(--kof) * 300) * -1);
+    height: calc(100% + (var(--kof) * 700));
+    top: calc((var(--kof) * 350) * -1);
     left: calc((var(--kof) * 200) * -1);
     right: 0;
     bottom: 0;
@@ -175,18 +176,15 @@ html {
 .header {
     position: relative;
     z-index: 10000;
-}
-
-.header__inner {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    right: 0;
-    top: 0;
-    padding-top: calc(var(--kof) * 72);
-    padding-right: calc(var(--kof) * 50);
-    z-index: 100001;
+    .lang {
+        position: fixed;
+        right: calc(var(--kof) * 58);
+        top: calc(var(--kof) * 138);
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+            right: 85px;
+            top: 200px;
+        }
+    }
     &.sidebar-btn {
         #sidebar-btn {
             &::after,
@@ -228,6 +226,60 @@ html {
         }
         
     }
+
+    &.black-nav {
+        #sidebar-btn {
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #000;
+                width: 100%;
+                height: calc(var(--kof) * 3);
+                transition: all 0.3s ease 0s;
+                @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+                    height: 3px;
+                    background-color: #fff;
+                }
+            }
+            span {
+                position: absolute;
+                background-color: #000;
+                width: 100%;
+                height: calc(var(--kof) * 3);
+                left: 0;
+                top: calc(var(--kof) * 11);
+                transition: all 0.3s ease 0s;
+                @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+                    height: 3px;
+                    top: 7px;
+                    background-color: #fff;
+                }
+            }
+            &:hover {
+                span, &::after, &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .lang__item--link {
+            color: $black;
+        }
+    }
+}
+
+.header__inner {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    top: 0;
+    padding-top: calc(var(--kof) * 72);
+    padding-right: calc(var(--kof) * 50);
+    z-index: 100001;
+    
 }
 
 .line-red {
@@ -587,7 +639,7 @@ html {
     }
 
     &--link {
-        font-family: Kyiv_Type;
+        font-family: "Kyiv_Type_Medium";
         font-weight: 500;
     }
 
@@ -618,7 +670,7 @@ html {
 }
 
 .main__item--link {
-    font-family: Kyiv_Type;
+    font-family: "Kyiv_Type_Medium";
     color: $black;
     font-size: calc(var(--kof) * 30);
     line-height: 100%;
@@ -722,7 +774,7 @@ html {
         justify-content: center;
         position: relative;
         width: auto;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     &__facebook--link, &__instagram--link {
         display: block;
@@ -825,6 +877,21 @@ html {
             }
         }
     }
+    &.black-list {
+        li {
+            a {
+                background-color: $black;
+            }
+            &.active {
+                a {
+                    border-color: $black;
+                }
+            }
+            span {
+                color: $black;
+            }
+        }
+    }
     li {
         margin-left: calc(var(--kof) * 20);
         line-height: 100%;
@@ -855,7 +922,7 @@ html {
         span {
             display: none;
             font-size: calc(var(--kof) * 12);
-            font-family: "Kyiv_Type_bold";
+            font-family: "Kyiv_Type_Medium";
             line-height: 100%;
             letter-spacing: 0.2em;
             text-transform: uppercase;
@@ -894,6 +961,17 @@ html {
     }
 
     .contacts-menu {
-        display: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        right: 0;
+        bottom: 0;
+        margin: 10px 0;
+        .tel {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
     }
 }
