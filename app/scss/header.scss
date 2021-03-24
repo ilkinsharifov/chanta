@@ -2,21 +2,7 @@
 
 
 html {
-    overflow-y: hidden;
     overflow-x: hidden;
-    &.page-ready {
-        animation: overflow 0.4s linear forwards;
-        animation-delay: 0.4s;
-    }
-}
-
-@keyframes overflow {
-    0% {
-        overflow-y: hidden;
-    }
-    100% {
-        overflow-y: visible;
-    }
 }
 
 .preloader-wrap {
