@@ -8,7 +8,7 @@
 	"scripts": {
 		"deploy": "gh-pages -d dist"
 	},
-	"homepage": "https://ilkin1.gihub.io/chanta",
+	"homepage": "https://ilkinsharifov.gihub.io/chanta",
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
 		"@babel/preset-env": "^7.12.10",
@@ -36,6 +36,7 @@
 		"webpack-stream": "^6.1.1"
 	},
 	"dependencies": {
+		"@fancyapps/fancybox": "^3.5.7",
 		"animate.css": "^4.1.1",
 		"gh-pages": "^3.1.0",
 		"swiper": "^6.4.15",
