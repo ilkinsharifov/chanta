@@ -586,6 +586,11 @@ html {
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) { 
         height: calc(var(--vh,1vh) * 100);
     }
+    .letter {
+        @media only screen and (max-width: 767px) {
+            display: block;
+        }
+    }
 }
 
 .sidebar.active {

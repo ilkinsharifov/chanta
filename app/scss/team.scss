@@ -65,6 +65,7 @@
    font-family: "Raleway_SemiBold";
    margin-bottom: calc(var(--kof) * 16);
    margin-top: calc(var(--kof) * 18);
+   text-decoration: none;
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       margin-top: 19px;
       margin-bottom: 22px;
@@ -438,7 +439,7 @@
    }
    &::before {
       content: '';
-      background: url(../images/src/icons/select-icon.svg) no-repeat;
+      background: url(../images/dist/icons/select-icon.svg) no-repeat;
       position: absolute;
       right: calc(var(--kof) * 17);
       top: 50%;
