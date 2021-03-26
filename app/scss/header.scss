@@ -498,6 +498,12 @@ html {
     @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
         margin-bottom: 20px;
     }
+    &.offset-bottom {
+        margin-bottom: calc(var(--kof) * 70);
+        @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+           margin-bottom: 0;
+        }
+    }
 }
 
 .tel__link {

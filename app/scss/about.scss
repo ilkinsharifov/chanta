@@ -1,5 +1,5 @@
 .s-about-top {
-   background: url(../images/dist/img/about-top-bg.jpg) no-repeat center;
+   background: url(../images/dist/img/about-top-bg.jpg) no-repeat center top;
    background-size: cover;
    &:before {
       display: none;
@@ -48,17 +48,18 @@
       }
       &:hover {
          .s-arrow-right {
-            background-color: $red;
+            &::after {
+               transition-delay: 0.3s;
+            }
+            &::before, &::after {
+               transform: translateX(0);
+            }
             svg {
                path {
                   stroke: #FCFCFC;
                }
             }
-            &.black {
-               background-color: $black;
-            }
-         }
-         
+         } 
       }
       .s-arrow-right {
          margin-left: calc(var(--kof) * 15);
@@ -76,6 +77,26 @@
    align-items: center;
    justify-content: center;
    transition: 0.3s;
+   overflow: hidden;
+   position: relative;
+   &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-101%);
+      transition: 0.3s;
+   }
+   &::before {
+      background-color: $red;
+   }
+   &::after {
+      background-color: $black;
+   }
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       width: 40px;
       height: 40px;
@@ -84,6 +105,8 @@
    svg {
       width: calc(var(--kof) * 23);
       height: calc(var(--kof) * 18);
+      position: relative;
+      z-index: 1;
       @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
          width: 23px;
          height: 18px;
@@ -93,16 +116,16 @@
       }
    }
    &:hover {
-      background-color: $red;
+      &::after {
+         transition-delay: 0.3s;
+      }
+      &::before, &::after {
+         transform: translateX(0);
+      }  
       svg {
          path {
             stroke: #FCFCFC;
          }
-      }
-   }
-   &.black {
-      &:hover {
-         background-color: $black;
       }
    }
 }

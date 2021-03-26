@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var scrollEl = $(this).attr('href');
         if ($(scrollEl).length != 0) {
             $('html, body').animate({
-                scrollTop: $(scrollEl).offset().top
+                scrollTop: $(scrollEl).offset().top + 1
             }, 500);
         }
         return false;
@@ -192,26 +192,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }    
 
-    const sliderProduct = new Swiper('.slider-product', {     
-        slidesPerView: 'auto',
-        speed: 800,
-        navigation: {
-          nextEl: '.product-next',
-          prevEl: '.product-prev',
-        },
-    });
-
-    if (window.matchMedia('(max-width: 1023px)').matches) {
-        const teamSlider = new Swiper('.team-img-slider', {     
+    if($('.slider-product').length) {
+        const sliderProduct = new Swiper('.slider-product', {     
             slidesPerView: 'auto',
             speed: 800,
             navigation: {
-              nextEl: '.team-next',
-              prevEl: '.team-prev',
+              nextEl: '.product-next',
+              prevEl: '.product-prev',
             },
         });
     }
-
     
     const galleryOptions = {
         slidesPerView: 'auto',
@@ -222,11 +212,48 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     }
 
-    const sliderGallery = new Swiper('.slider-gallery', galleryOptions)
+    if($('.slider-gallery').length) {
+        const sliderGallery = new Swiper('.slider-gallery', galleryOptions);
+    }
+    
 
     if (window.matchMedia('(max-width: 1023px)').matches) {
-        const sliderGalleryInner = new Swiper('.slider-gallery-inner', galleryOptions)
+        if($('.team-img-slider').length) {
+            const teamSlider = new Swiper('.team-img-slider', {     
+                slidesPerView: 'auto',
+                speed: 800,
+                navigation: {
+                  nextEl: '.team-next',
+                  prevEl: '.team-prev',
+                },
+            });
+        }
+        if($('.slider-gallery-inner').length) {
+            const sliderGalleryInner = new Swiper('.slider-gallery-inner', galleryOptions)
+        }
     }
+
+
+    $('[data-type="category"]').each(function() {
+        const productItem = $(this).find('[data-type="product"]');
+        const showMoreBtn = $(this).find('.show-more-product');
+        let productCount = 0;
+        productItem.each(function() {
+            productCount++;
+            if(productCount > 6) {
+                $(this).css('display', 'none');
+            }
+        });
+        if(productCount > 6) {
+            showMoreBtn.addClass('active');
+        }
+    });
+
+    $('.show-more-product').on('click', function() {
+        $(this).closest('[data-type="category"]').find('[data-type="product"]').fadeIn();
+        $(this).hide();
+    });
+
     
 
     // Animation on scroll
@@ -245,11 +272,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 13000);
 
 
-    ( function ( document, window, index )
-    {
+    (function ( document, window, index ) {
         var inputs = document.querySelectorAll( '.inputfile' );
-        Array.prototype.forEach.call( inputs, function( input )
-        {
+        Array.prototype.forEach.call( inputs, function( input ) {
             var label	 = input.nextElementSibling,
                 labelVal = label.innerHTML;
 
@@ -288,17 +313,20 @@ $(window).on('load', function() {
     }    
     setSliderHeight();
 
-    const sliderVertical = new Swiper('.slider-vertical', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        loop: true,
-        autoHeight: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        }
-    });
+    if($('.slider-vertical').length) {
+        const sliderVertical = new Swiper('.slider-vertical', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            autoHeight: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
+        });
+    }
+    
 
 });
 

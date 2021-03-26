@@ -1171,6 +1171,9 @@ a {
         padding-bottom: 40px;
         background-size: cover;
     }
+    @media only screen and (max-height: 730px) and (min-width: 1023px) {
+        padding-bottom: calc(var(--kof) * 370);
+    }
 }
 
 .frozen {
@@ -1313,6 +1316,12 @@ a {
         display: block;
         min-height: auto;
         background-image: none;
+    }
+
+    .culture-a {
+        bottom: auto;
+        top: 0;
+        height: 100%;
     }
 }
 
