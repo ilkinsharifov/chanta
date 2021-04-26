@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Title
+	</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+
+
+<body>
+
+	<div class="preloader-wrap">
+		<div class="preloader-overlay">
+			<div class="preloader-overlay__top"><div class="preloader-figure-top"></div></div>
+			<div class="preloader-overlay__line"></div>
+			<div class="preloader-overlay__bottom"><div class="preloader-figure-bottom"></div></div>	
+		</div>
+		<div class="preloader-logo">
+			<img src="./images/dist/icons/logo-loader.svg" alt="">
+		</div>
+  </div>
+
+  <header class="header">
+	<div class="header__inner">
+		<div id="sidebar-btn">
+			<div class="line-wrap">
+				<div class="line-red"></div>
+				<div class="line-black"></div>
+			</div>
+			<div class="sidebar-menu">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<div class="lang">
+		<div class="lang__selected lang-js"><span>UA</span></div>
+		<ul class="lang-list" data-da="footer-menu,0,1023">
+			<li><a href="#" class="lang-item">EN</a></li>
+			<li><a href="#" class="lang-item">RU</a></li>
+			<li><a href="#" class="lang-item active">UA</a></li>
+		</ul>
+	</div>
+	<div class="logo">
+		<a class="logo__link" href="#">
+			<img src="./images/dist/icons/logo.svg" alt="">
+		</a>
+	</div>
+
+	<div class="contacts-menu" data-da="footer-menu__contacts,1,1023">
+		<div class="tel">
+			<a class="tel__link" href="tel:+380">
+				<img src="./images/dist/icons/tel.svg" alt="">
+			</a>
+		</div>
+		<div class="message">
+			<a class="message__link" href="mailto:mail@mail.com">
+				<img src="./images/dist/icons/chat-icon.svg" alt="">
+			</a>
+		</div>
+	</div>
+
+
+	<!-- SIDEBAR -->
+
+	<div class="sidebar">
+		<div class="mobile-logo">
+			<a class="mobile-logo__link" href="#">
+				<img src="./images/dist/icons/logo.svg" alt="">
+			</a>
+		</div>
+		<nav class="nav">
+			<ul class="main__list">
+				<li class="main__item">
+					<a class="main__item--link" href="#">Головна</a>
+
+				</li>
+			</ul>
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a class="nav__item--link" href="#">Про Чанта</a>
+					<ul class="sub__list">
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Сертифікація</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Виробництво</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Команда</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="nav__item">
+					<a class="nav__item--link" href="#">Блог</a>
+					<ul class="sub__list">
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Спробуй наш хліб прямо зараз</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav__item">
+					<a class="nav__item--link" href="#">Контакти</a>
+					<ul class="sub__list">
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Загальні контакти</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Де купити</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Контакти для партнерів</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav__item">
+					<a class="nav__item--link" href="#">Хліб</a>
+					<ul class="sub__list">
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Артизан</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Чіабата</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Багети</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Міні-хліба</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Хліба "Спеціалітет"</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Житні хліба</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Заморозка (хліб) в індивідуальному пакованні</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Fresh (хліб) в індивідуальному пакованні</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="nav__item">
+					<a class="nav__item--link" href="#">Заморозка</a>
+					<div class="logo-frozen"></div>
+					<ul class="sub__list">
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Заморозка (круасан) в індивідуальному пакованні</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Fresh (круасан) в індивідуальному пакованні</a>
+						</li>
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Заморозка в індивідуальному пакованні</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav__item">
+					<a class="nav__item--link" href="#">Слойка</a>
+					<ul class="sub__list">
+						<li class="sub__item">
+							<a class="sub__item--link" href="#">Листкові вироби</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<div class="letter"></div>
+		<div class="footer-menu">
+			<div class="footer-menu__socials">
+				<a class="soc-item-icon" href="https://www.facebook.com/ChantaMount" target="_blank">
+					 <img src="./images/dist/icons/facebook.svg" alt="">
+				</a>
+				<a class="soc-item-icon" href="https://www.instagram.com/chantamount/" target="_blank">
+					 <img src="./images/dist/icons/instagram.svg" alt="">
+				</a>
+				<a class="soc-item-icon" href="#" target="_blank">
+					 <img src="./images/dist/icons/tiktok.svg" alt="">
+				</a>
+				<a class="soc-item-icon" href="#" target="_blank">
+					 <img src="./images/dist/icons/youtube.svg" alt="">
+				</a>
+			 </div>
+			<div class="footer-menu__contacts">
+				<p class="footer-menu__contacts--text">Маєте питання, телефонуйте:</p>
+				<a class="footer-menu__contacts--link" href="tel:+380674127761">+38 067 4127761</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<main>
+
+    <ul class="wayp-lists">
+        <li class="active">
+            <a href="#screen-1"></a>
+        </li> 
+        <li>
+            <a href="#screen-2"></a>
+            <span>Що таке FSCC22000</span>
+        </li>
+        <li>
+            <a href="#screen-3"></a>
+            <span>Навіщо він нам</span>
+        </li>
+        <li>
+            <a href="#screen-4"></a>
+            <span>Що він дає вам</span>
+        </li>
+    </ul>
+
+   <section class="top-main-bg top-main-crt tracked" id="screen-1">
+      <div class="crt-top-img"><img src="./images/dist/img/cert-img.jpg" alt=""></div>
+      <div class="about-top">
+         <div class="title-group">
+            <a href="#screen-2" class="go-to s-title text-white wow animate__animated animate__slideInUp">
+               Що таке FSCC22000
+               <span class="s-arrow-right">
+                  <svg viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M21 9.00007L13.0588 1.05884M21 9.00007L13.0588 16.9412M21 9.00007H1" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  </svg>                     
+               </span>
+            </a>
+            <a href="#screen-3" class="go-to s-title text-white wow animate__animated animate__slideInUp">
+               Навіщо він нам
+               <span class="s-arrow-right">
+                  <svg viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M21 9.00007L13.0588 1.05884M21 9.00007L13.0588 16.9412M21 9.00007H1" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  </svg>                     
+               </span>
+            </a>
+            <a href="#screen-4" class="go-to s-title text-white wow animate__animated animate__slideInUp">
+               Що він дає вам
+               <span class="s-arrow-right">
+                  <svg viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M21 9.00007L13.0588 1.05884M21 9.00007L13.0588 16.9412M21 9.00007H1" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  </svg>                     
+               </span>
+            </a>
+         </div>
+      </div>
+      <div class="letter"></div>
+      <div class="stamp"></div>
+      <div class="arrow arrow-top"></div>
+   </section>
+
+   <section class="s-crt-top tracked" id="screen-2">
+      <h2 class="s-title-big wow animate__animated animate__slideInUp">Що таке FSCC22000</h2>
+      <div class="crt-top-wrap">
+         <div class="s-crt-top__left">
+            <div class="list-about">
+               <h3 class="title-md wow animate__animated animate__slideInUp">Якість, підтверджена документально</h3>
+               <p class="wow animate__animated animate__slideInUp">
+                  Certification (FSSC 22000) — це схема сертифікації систем менеджменту безпеки харчової продукції. Іншими словами, це важливий документ для сфери харчової промисловості, що видає міжнародна компанія в результаті проходження аудита. Він визнаний організаціями GFSI (GFSI – Global Food Safety Initiative/Глобальна ініціатива по безпечності харчових продуктів) і Європейським співробітництвом з акредитації (ЕА).
+               </p>
+            </div>
+         </div>
+         <div class="s-crt-top__right">
+            <div class="crt-img"> 
+               <a href="./images/dist/img/crt-img.jpg" data-fancybox="images" class="crt-img__btn"><img src="./images/dist/icons/plus-icon.svg" alt=""></a>
+               <img src="./images/dist/img/crt-img.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="s-crt-info tracked" id="screen-3">
+      <div class="culture-a"></div>
+      <div class="crt-info-wrap">
+         <div class="crt-info-left">
+            <img src="./images/dist/img/crt-info-img.jpg" alt="">
+         </div>
+         <div class="crt-info-right">
+            <h2 class="s-title-big wow animate__animated animate__slideInUp">Навіщо він нам</h2>
+            <div class="list-about">
+               <h3 class="title-md wow animate__animated animate__slideInUp">Наш хліб офіційно визнаний у світі!</h3>
+               <p class="wow animate__animated animate__slideInUp">
+                  Для виробника — це визнання зі сторони Європейського співробітництва по акредитації. Сертифікація дає широке поле для використання виробленої продукції та дає “ліцензію” на реалізацію у міжнародних торговельних мережах. Крім цього, це — ефективне управління внутрішніми процесами, можливість співпраці з іноземними компаніями і постійного вдосконалення якості та безпеки нашого продукту.
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="s-crt-download tracked" id="screen-4">
+      <h2 class="s-title-big wow animate__animated animate__slideInUp">Що він дає вам</h2>
+      <div class="crt-download-wrap">
+         <div class="crt-download-left">
+            <div class="list-about">
+               <h3 class="title-md wow animate__animated animate__slideInUp">Безпека – наше все!</h3>
+               <p class="wow animate__animated animate__slideInUp">
+                  Хліб повинен бути не лише якісним і відповідати галузевим нормам або державним стандартам, його найважливіший критерій – відсутність загроз для споживача на кожному етапі харчового ланцюга: від зернятка пшениці на полі до буханця на столі. І споживач отримує впевненість у безпеці нашого хліба завдяки наявності сертифікату FSSC 22000.
+               </p>
+            </div>
+         </div>
+         <div class="crt-download-right">
+            <div class="crt-download">
+               <a href="#" class="crt-download__link wow animate__animated animate__slideInUp">Завантажити</a>
+               <div class="crt-download__descr wow animate__animated animate__slideInUp">
+                  Сертифікат FSSC 22000
+                  (Food Safety System Certification)               
+               </div>
+               <div class="crt-download__icon icon-pdf"><img src="./images/dist/icons/pdf-icon.svg" alt=""></div>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+   <section class="s-crt-bottom" style="background-image: url(images/dist/img/crt-bottom-img.jpg);"></section>
+
+
+</main>
+
+<footer class="footer">
+	<div class="container">
+		 <div class="copy" data-da="container,2,1023">
+			  <p class="copy__text">Всі права захищені. 2021. © ChantaMount</p>
+			  <a class="dev__link" href="https://learn-solve.com/" target="_blank">Розроблено Learn&Solve 2021</a>
+		 </div>
+		 <div class="socials" data-da="container,0,1023">
+			  <a class="soc-item-icon" href="#" target="_blank">
+				  <img src="./images/dist/icons/facebook.svg" alt="">
+			  </a>
+			  <a class="soc-item-icon" href="#" target="_blank">
+				  <img src="./images/dist/icons/instagram.svg" alt="">
+			  </a>
+			  <a class="soc-item-icon" href="#" target="_blank">
+				  <img src="./images/dist/icons/tiktok.svg" alt="">
+			  </a>
+			  <a class="soc-item-icon" href="#" target="_blank">
+				  <img src="./images/dist/icons/youtube.svg" alt="">
+			  </a>
+		 </div>
+		 <div class="call">
+			  <p class="call__text">Маєте питання, телефонуйте:</p>
+			  <div class="contacts-menu">
+					<div class="tel">
+						 <a class="tel__link" href="tel:+380">
+							  <img src="./images/dist/icons/tel.svg" alt="">
+						 </a>
+					</div>
+					<div class="message">
+						 <a class="message__link" href="mailto:mail@mail.com">
+							  <img src="./images/dist/icons/chat-icon.svg" alt="">
+						 </a>
+					</div>
+			  </div>
+			  <a class="call__tel" href="tel:+380674127761">+38 067 4127761</a>
+		 </div>
+	</div>
+	<div class="scroll-top">
+	  <img src="./images/dist/icons/arrow-up-icon.svg" alt="">		
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/waypoint.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/app.min.js"></script>
+
+ 
+</body> 
+
+</html>
