@@ -225,8 +225,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    if($('.bgnd-video').length) {
-        $('.bgnd-video').YTPlayer();
+    if($('[data-youtube]').length) {
+        $('[data-youtube]').youtube_background();
     }
 
     if($('.slider-product').length) {
