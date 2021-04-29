@@ -20,10 +20,10 @@
       @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
          padding-right: 0;
       }
-   }  
-   
+   }
+
    // .team-top-intro__right
-   
+
    &__right {
       flex: 0 0 calc(var(--kof) * 410);
       display: flex;
@@ -31,9 +31,8 @@
       @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
          display: none;
       }
-
    }
-   .s-title-sm  {
+   .s-title-sm {
       max-width: calc(var(--kof) * 758);
       width: 100%;
       @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
@@ -45,10 +44,10 @@
 .s-title-sm {
    font-weight: 500;
    font-size: calc(var(--kof) * 26);
-   font-family: 'Kyiv_Type_Medium';
+   font-family: "Kyiv_Type_Medium";
    line-height: 130%;
    letter-spacing: -0.05em;
-   color: #0B0D0E;
+   color: #0b0d0e;
    margin-bottom: calc(var(--kof) * 30);
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       margin-bottom: 36px;
@@ -61,7 +60,7 @@
    font-size: calc(var(--kof) * 40);
    line-height: 100%;
    text-transform: uppercase;
-   color: #0B0D0E;
+   color: #0b0d0e;
    font-family: "Raleway_SemiBold";
    margin-bottom: calc(var(--kof) * 16);
    margin-top: calc(var(--kof) * 18);
@@ -83,20 +82,20 @@
       margin-top: 30px;
       padding-left: 45px;
    }
-      &::before {
-         content: '';
-         position: absolute;
-         top: calc(var(--kof) * 14);
-         left: 0;
-         width: calc(var(--kof) * 50);
-         height: calc(var(--kof) * 2);
-         background-color: $red;
-         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
-            width: 30px;
-            height: 2px;
-            top: 14px;
-         }
+   &::before {
+      content: "";
+      position: absolute;
+      top: calc(var(--kof) * 14);
+      left: 0;
+      width: calc(var(--kof) * 50);
+      height: calc(var(--kof) * 2);
+      background-color: $red;
+      @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+         width: 30px;
+         height: 2px;
+         top: 14px;
       }
+   }
    // .list-about__title
 
    &__title {
@@ -105,7 +104,7 @@
       font-family: "Kyiv_Type_Medium";
       line-height: 130%;
       letter-spacing: -0.05em;
-      color: #0B0D0E;
+      color: #0b0d0e;
       margin-bottom: calc(var(--kof) * 15);
       @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
          margin-bottom: 15px;
@@ -122,14 +121,14 @@
 
 .link-with-decoration {
    font-size: calc(var(--kof) * 12);
-   line-height: 100%;   
+   line-height: 100%;
    text-transform: uppercase;
    color: $red;
    font-family: "Kyiv_Type_Medium";
    text-decoration: none;
    border-bottom: calc(var(--kof) * 1) solid $red;
    position: relative;
-   padding: calc(var(--kof) * 11) 0;
+   padding: calc(var(--kof) * 5) 0;
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       border-bottom: 1px solid $red;
       padding: 11px 0;
@@ -154,7 +153,7 @@
    font-family: "Kyiv_Type_Medium";
    letter-spacing: -0.05em;
    text-transform: uppercase;
-   color: #0B0D0E;
+   color: #0b0d0e;
    margin-bottom: calc(var(--kof) * 101);
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       font-size: 38px;
@@ -175,7 +174,7 @@
       width: calc(50% - 20px);
    }
    @media only screen and (max-width: 767px) {
-      width: 100%!important;
+      width: 100% !important;
    }
    .list-about {
       margin-top: 0;
@@ -185,7 +184,8 @@
       }
       &__title {
          margin-bottom: calc(var(--kof) * 25);
-         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+         @media only screen and (max-width: 1023px),
+            (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             margin-bottom: 20px;
          }
       }
@@ -193,7 +193,8 @@
 }
 
 .team-img-slider {
-   .team-prev, .team-next {
+   .team-prev,
+   .team-next {
       display: none;
       @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
          display: block;
@@ -211,7 +212,8 @@
    &:nth-child(2) {
       .team-img-about {
          bottom: calc(var(--kof) * 113);
-         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+         @media only screen and (max-width: 1023px),
+            (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             bottom: 113px;
          }
       }
@@ -219,7 +221,8 @@
    &:nth-child(3) {
       .team-img-about {
          bottom: calc(var(--kof) * 178);
-         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+         @media only screen and (max-width: 1023px),
+            (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             bottom: 178px;
          }
       }
@@ -251,14 +254,14 @@
    left: 0;
    transition: 0.4s;
    bottom: calc(var(--kof) * 50);
-   background-color: #0B0D0E;
-   color: #FCFCFC;
+   background-color: #0b0d0e;
+   color: #fcfcfc;
    padding: calc(var(--kof) * 10) calc(var(--kof) * 30) calc(var(--kof) * 15) calc(var(--kof) * 50);
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       padding: 10px 30px 15px 50px;
       bottom: 50px;
    }
-   
+
    // .team-img-about__name
 
    &__name {
@@ -289,7 +292,7 @@
    letter-spacing: -0.05em;
    text-transform: uppercase;
    font-family: "Kyiv_Type_Medium";
-   color: #0B0D0E;
+   color: #0b0d0e;
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       font-size: 38px;
    }
@@ -298,8 +301,6 @@
       color: $red;
    }
 }
-
-
 
 .s-team-form {
    padding: calc(var(--kof) * 193) calc(var(--kof) * 240) calc(var(--kof) * 118) calc(var(--kof) * 240);
@@ -333,7 +334,8 @@
       &::before {
          width: calc(var(--kof) * 60);
          top: calc(var(--kof) * 10);
-         @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+         @media only screen and (max-width: 1023px),
+            (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
             top: 10px;
             width: 30px;
          }
@@ -348,7 +350,6 @@
       margin-bottom: 50px;
    }
 }
-
 
 .team-form-right {
    flex: 0 0 calc(var(--kof) * 360);
@@ -373,28 +374,32 @@
    font-size: calc(var(--kof) * 14);
    font-family: "Raleway_Regular";
    font-weight: 400;
-   color: #0B0D0E;
+   color: #0b0d0e;
    box-sizing: border-box;
-   border-bottom: calc(var(--kof) * 1) solid #DCDFE0;
+   border-bottom: calc(var(--kof) * 1) solid #dcdfe0;
    padding: calc(var(--kof) * 10) calc(var(--kof) * 20) calc(var(--kof) * 9) calc(var(--kof) * 20);
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       padding: 10px 20px 9px 20px;
       font-size: 14px;
    }
-   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: #5C6970;
+   &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #5c6970;
       opacity: 1;
    }
-   &::-moz-placeholder { /* Firefox 19+ */
-      color: #5C6970;
+   &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #5c6970;
       opacity: 1;
    }
-   &:-ms-input-placeholder { /* IE 10+ */
-      color: #5C6970;
+   &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #5c6970;
       opacity: 1;
    }
-   &:-moz-placeholder { /* Firefox 18- */
-      color: #5C6970;
+   &:-moz-placeholder {
+      /* Firefox 18- */
+      color: #5c6970;
       opacity: 1;
    }
 }
@@ -409,21 +414,18 @@
    }
 }
 
-
-
-
 /* The container must be positioned relative: */
 .custom-select {
    position: relative;
- }
- 
- .custom-select select {
+}
+
+.custom-select select {
    display: none; /*hide original SELECT element: */
- }
- 
- .select-selected {
+}
+
+.select-selected {
    text-transform: uppercase;
-   color: #0B0D0E;
+   color: #0b0d0e;
    font-weight: 600;
    font-size: calc(var(--kof) * 14);
    font-family: "Raleway_SemiBold";
@@ -438,7 +440,7 @@
       border-bottom: 1px solid $red;
    }
    &::before {
-      content: '';
+      content: "";
       background: url(../images/dist/icons/select-icon.svg) no-repeat;
       position: absolute;
       right: calc(var(--kof) * 17);
@@ -453,11 +455,10 @@
          right: 17px;
       }
    }
- }
- 
- 
- /* Style items (options): */
- .select-items {
+}
+
+/* Style items (options): */
+.select-items {
    position: absolute;
    box-shadow: 0 calc(var(--kof) * 15) calc(var(--kof) * 15) rgba(11, 13, 14, 0.15);
    top: 100%;
@@ -468,21 +469,21 @@
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       box-shadow: 0 15px 15px rgba(11, 13, 14, 0.15);
    }
- }
- 
- /* Hide the items when the select box is closed: */
- .select-hide {
-   display: none; 
- }
+}
 
- .select-items div {
+/* Hide the items when the select box is closed: */
+.select-hide {
+   display: none;
+}
+
+.select-items div {
    padding: calc(var(--kof) * 10) calc(var(--kof) * 20) calc(var(--kof) * 9) calc(var(--kof) * 20);
    text-transform: uppercase;
    font-weight: 600;
    font-family: "Raleway_SemiBold";
    font-size: calc(var(--kof) * 14);
    line-height: 150%;
-   color: #0B0D0E;
+   color: #0b0d0e;
    cursor: pointer;
    transition: 0.3s;
    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
@@ -490,33 +491,34 @@
       font-size: 14px;
    }
 }
- 
- .select-items div:hover,  .select-items .same-as-selected {
+
+.select-items div:hover,
+.select-items .same-as-selected {
    background-color: $red;
    color: #fcfcfc;
- }
+}
 
- .input-file-wrap {
-    padding-left: calc(var(--kof) * 20);
-    display: block;
-    position: relative;
-    margin-top: calc(var(--kof) * 26);
-    margin-bottom: calc(var(--kof) * 27);
-    @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
+.input-file-wrap {
+   padding-left: calc(var(--kof) * 20);
+   display: block;
+   position: relative;
+   margin-top: calc(var(--kof) * 26);
+   margin-bottom: calc(var(--kof) * 27);
+   @media only screen and (max-width: 1023px), (min-width: 1024px) and (max-width: 1025px) and (min-height: 800px) {
       padding-left: 20px;
       margin-top: 26px;
       margin-bottom: 27px;
-    }
- }
+   }
+}
 
- .inputfile {
+.inputfile {
    position: absolute;
    opacity: 0;
    top: -100%;
    left: -100%;
- }
+}
 
- .inputfile + .inputfile-text {
+.inputfile + .inputfile-text {
    max-width: 80%;
    font-size: calc(var(--kof) * 14);
    line-height: 150%;
